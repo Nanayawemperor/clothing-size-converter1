@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clothing Size Converter | Converter</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="divider">
+      <div class="logo">
+        <img src="/images/logo.svg" alt="logo" />
+        <a href="index.html">Clothing<span class="highlight">Size Converter</span></a>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="converter.html" class="active">Converter</a>
+        <a href="profile.html">Profile</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <main class="divider">
+      <section class="converter">
+        <h2>Convert Sizes</h2>
+
+        <form id="convert-form">
+          <div class="form-row">
+            <label for="category">Category</label>
+            <select id="category" name="category">
+              <option value="tops">Tops</option>
+              <option value="bottoms">Bottoms</option>
+              <option value="shoes">Shoes</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender">
+              <option value="women">Women</option>
+              <option value="men">Men</option>
+              <option value="unisex">Unisex</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="region-source">Region</label>
+            <select id="region-source" name="region-source">
+              <option value="US">US</option>
+              <option value="UK">UK</option>
+              <option value="EU">EU</option>
+              <option value="JP">JP</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="size-input">Size</label>
+            <input id="size-input" name="size" placeholder="e.g., M or 38" required />
+          </div>
+
+          <div class="form-row">
+            <button type="submit" class="btn">Convert</button>
+            <button id="clear-results" type="button" class="btn btn-ghost">Clear</button>
+          </div>
+        </form>
+
+        <div id="loader" class="hidden">Loading data…</div>
+
+        <section id="results" class="results">
+          <h3>Results</h3>
+          <table id="results-table">
+            <thead>
+              <tr>
+                <th>Region</th>
+                <th>Label</th>
+                <th>Measurement (cm/in)</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td colspan="4">Enter values and click Convert</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+      </section>
+    </main>
+
+    <footer>
+      &copy;2025 👕 Clothing Size Converter
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

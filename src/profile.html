@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile | Clothing Size Converter</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="divider">
+      <div class="logo">
+        <img src="/images/logo.svg" alt="logo" />
+        <a href="index.html">Clothing<span class="highlight">Size Converter</span></a>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="converter.html">Converter</a>
+        <a href="profile.html" class="active">Profile</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <main class="divider">
+      <section class="profile-page">
+        <h2>Your Profile</h2>
+        <form id="profile-form">
+          <div class="form-row">
+            <label for="default-gender">Default Gender</label>
+            <select id="default-gender">
+              <option value="">(none)</option>
+              <option value="women">Women</option>
+              <option value="men">Men</option>
+              <option value="unisex">Unisex</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="default-region">Default Region</label>
+            <select id="default-region">
+              <option value="">(none)</option>
+              <option value="US">US</option>
+              <option value="UK">UK</option>
+              <option value="EU">EU</option>
+              <option value="JP">JP</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <button type="submit" class="btn">Save Preferences</button>
+            <button id="clear-preferences" type="button" class="btn btn-ghost">Clear</button>
+          </div>
+        </form>
+
+        <section class="recent-conversions">
+          <h3>Recent Conversions</h3>
+          <ul id="recent-list"></ul>
+        </section>
+      </section>
+    </main>
+
+    <footer>&copy;2025 Clothing Size Converter</footer>
+
+    <script type="module" src="/src/js/profile.js"></script>
+  </body>
+</html>
