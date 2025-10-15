@@ -3,6 +3,7 @@ import { resolve } from "path";
 
 export default defineConfig({
   root: 'src/', // ensure Vite uses the project root
+  base: '/', // ensures paths resolve from site root on Netlify
   build: {
     outDir: '../dist',
     rollupOptions: {

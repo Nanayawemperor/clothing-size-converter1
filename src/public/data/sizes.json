@@ -1,44 +1,61 @@
 {
   "tops": {
-    "men": {
-      "US": ["S", "M", "L", "XL"],
-      "UK": ["36", "38", "40", "42"],
-      "EU": ["46", "48", "50", "52"],
-      "JP": ["S", "M", "L", "XL"]
-    },
-    "women": {
-      "US": ["2", "4", "6", "8", "10"],
-      "UK": ["6", "8", "10", "12", "14"],
-      "EU": ["34", "36", "38", "40", "42"],
-      "JP": ["5", "7", "9", "11", "13"]
-    }
+    "men": [
+      { "region": "US", "label": "S", "measurement": "36–38 in", "notes": "Slim fit", "equivalents": { "UK": "36", "EU": "46", "JP": "S" } },
+      { "region": "US", "label": "M", "measurement": "39–40 in", "notes": "Standard fit", "equivalents": { "UK": "38", "EU": "48", "JP": "M" } },
+      { "region": "US", "label": "L", "measurement": "41–43 in", "notes": "Relaxed fit", "equivalents": { "UK": "40", "EU": "50", "JP": "L" } },
+      { "region": "US", "label": "XL", "measurement": "44–46 in", "notes": "Loose fit", "equivalents": { "UK": "42", "EU": "52", "JP": "XL" } }
+    ],
+    "women": [
+      { "region": "US", "label": "S", "measurement": "33–35 in", "notes": "Slim fit", "equivalents": { "UK": "8", "EU": "36", "JP": "S" } },
+      { "region": "US", "label": "M", "measurement": "36–38 in", "notes": "Regular fit", "equivalents": { "UK": "10", "EU": "38", "JP": "M" } },
+      { "region": "US", "label": "L", "measurement": "39–41 in", "notes": "Loose fit", "equivalents": { "UK": "12", "EU": "40", "JP": "L" } },
+      { "region": "US", "label": "XL", "measurement": "42–44 in", "notes": "Relaxed fit", "equivalents": { "UK": "14", "EU": "42", "JP": "XL" } }
+    ],
+    "unisex": [
+      { "region": "US", "label": "XS", "measurement": "34–35 in", "notes": "Fits men & women", "equivalents": { "UK": "34", "EU": "44", "JP": "XS" } },
+      { "region": "US", "label": "S", "measurement": "36–38 in", "notes": "Fits men & women", "equivalents": { "UK": "36", "EU": "46", "JP": "S" } },
+      { "region": "US", "label": "M", "measurement": "39–40 in", "notes": "Fits men & women", "equivalents": { "UK": "38", "EU": "48", "JP": "M" } },
+      { "region": "US", "label": "L", "measurement": "41–43 in", "notes": "Fits men & women", "equivalents": { "UK": "40", "EU": "50", "JP": "L" } },
+      { "region": "US", "label": "XL", "measurement": "44–46 in", "notes": "Fits men & women", "equivalents": { "UK": "42", "EU": "52", "JP": "XL" } }
+    ]
   },
+
   "bottoms": {
-    "men": {
-      "US": ["30", "32", "34", "36", "38"],
-      "UK": ["30", "32", "34", "36", "38"],
-      "EU": ["40", "42", "44", "46", "48"],
-      "JP": ["M", "L", "LL", "XL", "XXL"]
-    },
-    "women": {
-      "US": ["2", "4", "6", "8", "10"],
-      "UK": ["6", "8", "10", "12", "14"],
-      "EU": ["34", "36", "38", "40", "42"],
-      "JP": ["5", "7", "9", "11", "13"]
-    }
+    "men": [
+      { "region": "US", "label": "30", "measurement": "30 in waist", "notes": "Slim fit jeans", "equivalents": { "UK": "30", "EU": "40", "JP": "M" } },
+      { "region": "US", "label": "32", "measurement": "32 in waist", "notes": "Regular fit", "equivalents": { "UK": "32", "EU": "42", "JP": "L" } },
+      { "region": "US", "label": "34", "measurement": "34 in waist", "notes": "Relaxed fit", "equivalents": { "UK": "34", "EU": "44", "JP": "XL" } }
+    ],
+    "women": [
+      { "region": "US", "label": "6", "measurement": "26–27 in waist", "notes": "Slim fit", "equivalents": { "UK": "8", "EU": "36", "JP": "S" } },
+      { "region": "US", "label": "8", "measurement": "28–29 in waist", "notes": "Regular fit", "equivalents": { "UK": "10", "EU": "38", "JP": "M" } },
+      { "region": "US", "label": "10", "measurement": "30–31 in waist", "notes": "Comfort fit", "equivalents": { "UK": "12", "EU": "40", "JP": "L" } }
+    ],
+    "unisex": [
+      { "region": "US", "label": "28", "measurement": "28 in waist", "notes": "Slim unisex", "equivalents": { "UK": "28", "EU": "38", "JP": "S" } },
+      { "region": "US", "label": "30", "measurement": "30 in waist", "notes": "Standard unisex", "equivalents": { "UK": "30", "EU": "40", "JP": "M" } },
+      { "region": "US", "label": "32", "measurement": "32 in waist", "notes": "Regular unisex", "equivalents": { "UK": "32", "EU": "42", "JP": "L" } },
+      { "region": "US", "label": "34", "measurement": "34 in waist", "notes": "Loose unisex", "equivalents": { "UK": "34", "EU": "44", "JP": "XL" } }
+    ]
   },
+
   "shoes": {
-    "men": {
-      "US": ["7", "8", "9", "10", "11"],
-      "UK": ["6", "7", "8", "9", "10"],
-      "EU": ["40", "41", "42", "43", "44"],
-      "JP": ["25", "26", "27", "28", "29"]
-    },
-    "women": {
-      "US": ["5", "6", "7", "8", "9"],
-      "UK": ["3", "4", "5", "6", "7"],
-      "EU": ["36", "37", "38", "39", "40"],
-      "JP": ["22", "23", "24", "25", "26"]
-    }
+    "men": [
+      { "region": "US", "label": "8", "measurement": "26 cm", "notes": "Standard width", "equivalents": { "UK": "7", "EU": "41", "JP": "26" } },
+      { "region": "US", "label": "9", "measurement": "27 cm", "notes": "Standard width", "equivalents": { "UK": "8", "EU": "42", "JP": "27" } },
+      { "region": "US", "label": "10", "measurement": "28 cm", "notes": "Wide fit", "equivalents": { "UK": "9", "EU": "43", "JP": "28" } }
+    ],
+    "women": [
+      { "region": "US", "label": "6", "measurement": "23 cm", "notes": "Slim width", "equivalents": { "UK": "4", "EU": "36", "JP": "23" } },
+      { "region": "US", "label": "7", "measurement": "24 cm", "notes": "Standard width", "equivalents": { "UK": "5", "EU": "37", "JP": "24" } },
+      { "region": "US", "label": "8", "measurement": "25 cm", "notes": "Wide fit", "equivalents": { "UK": "6", "EU": "38", "JP": "25" } }
+    ],
+    "unisex": [
+      { "region": "US", "label": "6", "measurement": "24 cm", "notes": "Unisex slim", "equivalents": { "UK": "5", "EU": "38", "JP": "24" } },
+      { "region": "US", "label": "7", "measurement": "25 cm", "notes": "Unisex standard", "equivalents": { "UK": "6", "EU": "39", "JP": "25" } },
+      { "region": "US", "label": "8", "measurement": "26 cm", "notes": "Unisex wide", "equivalents": { "UK": "7", "EU": "41", "JP": "26" } },
+      { "region": "US", "label": "9", "measurement": "27 cm", "notes": "Unisex extra wide", "equivalents": { "UK": "8", "EU": "42", "JP": "27" } }
+    ]
   }
 }

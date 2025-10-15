@@ -1,4 +1,4 @@
-
+// src/js/api.js
 export async function fetchSizeData() {
   try {
     const response = await fetch('/data/sizes.json');
@@ -10,22 +10,32 @@ export async function fetchSizeData() {
   }
 }
 
+// Match JSON structure (with unisex)
 export function findSizeEquivalents(data, category, gender, region, size) {
   if (!data || !data[category] || !data[category][gender]) {
-    return { error: 'Size data not available. Please try again later.' };
+    return { error: 'No data for this category/gender.' };
   }
 
-  const regionSizes = data[category][gender][region];
-  if (!regionSizes) return { error: 'Region not found.' };
+  const categoryData = data[category][gender];
+  const match = categoryData.find(
+    (item) => item.region === region && item.label.toUpperCase() === size
+  );
 
-  const index = regionSizes.indexOf(size);
-  if (index === -1) {
-    return { error: `Size "${size}" not found in ${region} for ${gender}.` };
+  if (!match) {
+    return { error: `No match found for size ${size} in ${region}.` };
   }
 
-  const equivalents = {};
-  for (const [key, values] of Object.entries(data[category][gender])) {
-    equivalents[key] = values[index] || '—';
+  // Merge equivalents with region/label
+  const results = [];
+  results.push({ region: match.region, label: match.label, measurement: match.measurement || "-",
+    notes: match.notes || "-"
+   });
+
+  for (const [r, label] of Object.entries(match.equivalents)) {
+    results.push({ region: r, label, measurement: match.measurement || "-",
+      notes: match.notes || "-"
+     });
   }
-  return equivalents;
+
+  return results;
 }
