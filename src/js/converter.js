@@ -3,25 +3,20 @@ import { getRecentConversions, saveConversion } from './storage.js';
 import { renderResults, renderRecentConversions, showToast } from './ui.js';
 import { translateUI, detectLanguage } from './translator.js';
 
-export async function initializeConverter() {
+document.addEventListener('DOMContentLoaded', async () => {
   const data = await fetchSizeData();
   renderRecentConversions(getRecentConversions());
 
-  const selector = document.getElementById('language-selector');
-  const userLang = detectLanguage();
-  if (selector) {
-    selector.value = userLang;
-    await translateUI(userLang);
-
-    selector.addEventListener('change', async (e) => {
-      const lang = e.target.value;
-      localStorage.setItem('preferredLang', lang);
-      await translateUI(lang);
-    });
-  }
+  // Language selector
+  const langSelect = document.getElementById('language');
+  langSelect.value = detectLanguage();
+  langSelect.addEventListener('change', async () => {
+    const lang = langSelect.value === 'auto' ? detectLanguage() : langSelect.value;
+    await translateUI(lang);
+  });
 
   const form = document.getElementById('convert-form');
-  form?.addEventListener('submit', (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const category = document.getElementById('category').value;
@@ -40,4 +35,4 @@ export async function initializeConverter() {
       showToast(results.error, 'error');
     }
   });
-}
+});

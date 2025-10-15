@@ -1,11 +1,17 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite';
+import { resolve } from "path";
 
 export default defineConfig({
-  root: '.', // ensure Vite uses the project root
+  root: 'src/', // ensure Vite uses the project root
   build: {
-    outDir: 'dist',
+    outDir: '../dist',
     rollupOptions: {
-      input: './index.html'
+      input: {
+        main: resolve(__dirname, "src/index.html"),
+        about: resolve(__dirname, "src/about/index.html"),
+        profile: resolve(__dirname, "src/profile/index.html"),
+        converter: resolve(__dirname, "src/converter/index.html"),
+      },
     }
   },
   server: {

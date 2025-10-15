@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clothing Size Converter | Converter</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header class="divider">
+      <div class="logo">
+        <img src="../public/images/logo.svg" alt="logo" />
+        <a href="index.html">Clothing<span class="highlight">Size Converter</span></a>
+      </div>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../converter/index.html" class="active">Converter</a>
+        <a href="../profile/index.html">Profile</a>
+        <a href="../about/index.html">About</a>
+      </nav>
+      <!-- inside <header> -->
+<div class="language-selector">
+  <label for="language" data-i18n="language">🌐 Language:</label>
+  <select id="language">
+    <option value="auto">Auto Detect</option>
+    <option value="en">English</option>
+    <option value="fr">French</option>
+    <option value="es">Spanish</option>
+    <option value="de">German</option>
+    <option value="zh">Chinese</option>
+  </select>
+</div>
+
+    </header>
+
+    <main class="divider">
+      <section class="converter">
+        <h2 data-i18n="converter_title">Convert Sizes</h2>
+
+        <form id="convert-form">
+          <div class="form-row">
+            <label for="category" data-i18n="label_category">Category</label>
+            <select id="category" name="category">
+              <option value="tops" data-i18n="tops">Tops</option>
+              <option value="bottoms" data-i18n="bottoms">Bottoms</option>
+              <option value="shoes" data-i18n="shoes">Shoes</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="gender" data-i18n="gender">Gender</label>
+            <select id="gender" name="gender">
+              <option value="women" data-i18n="women">Women</option>
+              <option value="men" data-i18n="men">Men</option>
+              <option value="unisex" data-i18n="unisex">Unisex</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="region-source" data-i18n="region">Region</label>
+            <select id="region-source" name="region-source">
+              <option value="US">US</option>
+              <option value="UK">UK</option>
+              <option value="EU">EU</option>
+              <option value="JP">JP</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="size-input" data-i18n="size">Size</label>
+            <input id="size-input" name="size" placeholder="e.g., M or 38" required />
+          </div>
+
+          <div class="form-row">
+            <button type="submit" class="btn" data-i18n="convert_btn">Convert</button>
+            <button id="clear-results" type="button" class="btn btn-ghost" data-i18n="clear-btn">Clear</button>
+          </div>
+        </form>
+
+        <div id="loader" class="hidden">Loading data…</div>
+
+        <section id="results" class="results">
+          <h3 data-i18n="results">Results</h3>
+          <table id="results-table">
+            <thead>
+              <tr>
+                <th data-i18n="region">Region</th>
+                <th data-i18n="label">Label</th>
+                <th data-i18n="measurement">Measurement (cm/in)</th>
+                <th data-i18n="notes">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td colspan="4" data-i18n="convert_btn">Enter values and click Convert</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+      </section>
+    </main>
+
+    <footer data-i18n="footer">
+      &copy;2025 👕 Clothing Size Converter
+    </footer>
+
+    <script type="module" src="/src/js/converter.js"></script>
+  </body>
+</html>

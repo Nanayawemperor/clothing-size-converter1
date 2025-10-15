@@ -10,25 +10,38 @@
   <body>
     <header class="divider">
       <div class="logo">
-        <img src="/src/images/logo.svg" alt="logo" />
+        <img src="/src/public/images/logo.svg" alt="logo" />
         <a href="index.html">Clothing<span class="highlight">Size Converter</span></a>
       </div>
       <nav class="nav">
         <a href="index.html" class="active">Home</a>
-        <a href="converter.html">Converter</a>
-        <a href="profile.html">Profile</a>
-        <a href="about.html">About</a>
+        <a href="/src/converter/index.html">Converter</a>
+        <a href="/src/profile/index.html">Profile</a>
+        <a href="/src/about/index.html">About</a>
       </nav>
+      <!-- inside <header> -->
+<div class="language-selector">
+  <label for="language" data-i18n="language">🌐 Language:</label>
+  <select id="language">
+    <option value="auto">Auto Detect</option>
+    <option value="en">English</option>
+    <option value="fr">French</option>
+    <option value="es">Spanish</option>
+    <option value="de">German</option>
+    <option value="zh">Chinese</option>
+  </select>
+</div>
+
     </header>
 
     <main class="divider">
       <section class="hero">
         <!-- Banner image is provided as external reference; you can replace with /images/banner.jpg -->
-        <img src="/src/images/banner.png" alt="Fashion banner" />
+        <img src="/src/public/images/banner.png" alt="Fashion banner" />
         <div class="hero-text">
           <h1>Find Your Perfect Fit Anywhere 🌍</h1>
           <p>Convert clothing sizes across regions (US, UK, EU, JP) instantly.</p>
-          <a href="converter.html" class="btn">Start Converting</a>
+          <a href="/src/converter/index.html" class="btn">Start Converting</a>
         </div>
       </section>
 
@@ -46,6 +59,8 @@
       &copy; 2025 👕 Clothing-Size Converter
     </footer>
 
-    <script type="module" src="/src/js/animations.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/translator.js"></script>
+
   </body>
 </html>

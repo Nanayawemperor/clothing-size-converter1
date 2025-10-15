@@ -1,4 +1,3 @@
-// src/js/animations.js
 document.addEventListener('DOMContentLoaded', () => {
   const heroText = document.querySelector('.hero-text');
   if (heroText) {

@@ -2,12 +2,13 @@
   "name": "clothing-size-converter",
   "version": "1.0.0",
   "private": true,
+  "main": "main.js",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "start": "vite",
+    "build": "vite build --emptyOutDir",
     "preview": "vite preview",
-    "lint": "eslint . --ext .js"
+    "lint": "eslint *.js src/**/*.js"
   },
   "devDependencies": {
     "vite": "^5.4.0",
